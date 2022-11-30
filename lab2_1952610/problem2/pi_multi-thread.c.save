@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <pthread.h>
+#define NUM_THREADS 4
+void* random(void* threadid){
+	
+}
+
+int main(int argc, char* argv[]){
+	int tpoint = 0;
+	if(argc != 2) return 0;
+	else{
+		tpoint = atoi(argv[1]);
+		pthread_t threads[NUM_THREADS];
+		for(t=0; t<NUM_THREADS; t++){
+			pthread_create(&threads[t], 
+NULL, random, (void *)t);
+		}
+	}
+
+}
